@@ -1,19 +1,19 @@
-package com.guqian.BestPerformanceApplication;
+package com.guqian.BestPerformanceApplication.memory;
 
 import android.os.Bundle;
 import android.view.View;
 
+import com.guqian.BestPerformanceApplication.R;
 import com.guqian.BestPerformanceApplication.base.BaseActivity;
-import com.guqian.BestPerformanceApplication.memory.MemoryActivity;
 import com.guqian.BestPerformanceApplication.utils.ActivityUtils;
 
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity {
+public class MemoryActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_memory;
     }
 
     @Override
@@ -23,6 +23,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
+
     }
 
     @Override
@@ -30,16 +31,14 @@ public class MainActivity extends BaseActivity {
 
     }
 
-
-    @OnClick({R.id.button_memory, R.id.button_thread})
+    @OnClick({R.id.button_object_pool, R.id.button_lru_cache})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.button_memory:
-                ActivityUtils.openActivity(this, MemoryActivity.class);
+            case R.id.button_object_pool:
+                ActivityUtils.openActivity(this,ObjectPoolsActivity.class);
                 break;
-            case R.id.button_thread:
+            case R.id.button_lru_cache:
                 break;
         }
     }
-
 }

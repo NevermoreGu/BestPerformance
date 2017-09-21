@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">BestPerformanceApplication</string>
+
+    <!--主页-->
+    <string name="memory">内存</string>
+    <string name="thread">线程</string>
+
+    <string name="object_pool">对象池</string>
+
+    <!--内存 对象池-->
+    <string name="for_in">for循环对象放循环里面</string>
+    <string name="for_out">for循环对象放循环外面</string>
+    <string name="create_object_pool">创建对象池</string>
+    <string name="lrucache">lruCache</string>
+
 </resources>

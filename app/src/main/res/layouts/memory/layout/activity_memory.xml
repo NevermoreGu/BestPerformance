@@ -5,25 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.guqian.BestPerformanceApplication.MainActivity">
+    tools:context="com.guqian.BestPerformanceApplication.memory.MemoryActivity">
+
 
     <Button
-        android:id="@+id/button_memory"
+        android:id="@+id/button_object_pool"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/memory"
+        android:text="@string/object_pool"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/button_thread"
+        android:id="@+id/button_lru_cache"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/thread"
-        app:layout_constraintLeft_toLeftOf="@+id/button_memory"
-        app:layout_constraintRight_toRightOf="@+id/button_memory"
-        app:layout_constraintTop_toBottomOf="@+id/button_memory"/>
+        android:text="@string/lrucache"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/button_object_pool"
+        app:layout_constraintRight_toRightOf="@+id/button_object_pool"
+        app:layout_constraintTop_toBottomOf="@+id/button_object_pool"/>
 </android.support.constraint.ConstraintLayout>
