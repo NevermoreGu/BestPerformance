@@ -1,26 +1,45 @@
 package com.guqian.BestPerformanceApplication;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.guqian.BestPerformanceApplication.base.BaseActivity;
+import com.guqian.BestPerformanceApplication.memory.ObjectPoolsActivity;
+import com.guqian.BestPerformanceApplication.utils.ActivityUtils;
 
-    // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("native-lib");
+import butterknife.OnClick;
+
+public class MainActivity extends BaseActivity {
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initVariables() {
 
-        // Example of a call to a native method
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
+    @Override
+    public void initViews(Bundle savedInstanceState) {
+    }
+
+    @Override
+    public void loadData() {
+
+    }
+
+
+    @OnClick({R.id.button_memory, R.id.button_thread})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.button_memory:
+                ActivityUtils.openActivity(this, ObjectPoolsActivity.class);
+                break;
+            case R.id.button_thread:
+                break;
+        }
+    }
+
 }

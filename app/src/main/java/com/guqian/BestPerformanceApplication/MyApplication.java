@@ -1,13 +1,13 @@
 package com.guqian.BestPerformanceApplication;
 
+import android.app.Application;
 import android.os.StrictMode;
-import android.support.multidex.MultiDexApplication;
 
 /**
  * Created by guqian on 2017/9/19.
  */
 
-public class MyApplication extends MultiDexApplication {
+public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
